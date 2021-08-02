@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Covid-19</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<header>
+  <app-bar></app-bar>
+  <div class="jumbotron jumbotron-fluid bg-dark text-white">
+    <div class="container">
+      <h1 class="display-6">Pantau Informasi Seputar COVID-19 <br> Secara Tepat dan Akurat.</h1>
+      <p class="lead">Situs ini untuk menampilkan data informasi tentang corona.</p><br><br><br>
+      <div class="text mb-4">
+       <h3 class="display-6">Jumlah Kasus di Indonesia Saat Ini</h3>
+      </div>
+      <div class="row mb-5">
+        <div class="col-md-3">
+          <div class="card text-light bg-secondary mb-3" style="height: 130px;">
+            <div class="card-body text-center">
+              <span id="confirmed" class="angka text-warning"></span>
+              <span>Terkonfirmasi</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-light bg-secondary mb-3" style="height: 130px;">
+            <div class="card-body text-center">
+              <span id="active" class="angka text-primary"></span>
+              <span class="">Dalam Perawatan</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-light bg-secondary mb-3" style="height: 130px;">
+            <div class="card-body text-center">
+              <span id="recovered" class="angka text-success"></span>
+              <span class="">Sembuh</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-light bg-secondary mb-3" style="height: 130px;">
+            <div class="card-body text-center">
+              <span id="deaths" class="angka text-danger"></span>
+              <span class="">Meningggal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <tentang-corona></tentang-corona>
+  <section class="py-4" id="sebaran">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h2 class="display-6 mb-3">Sebaran Kasus</h2>
+        <div class="card">
+          <div class="card-header">
+            Data Kasus Coronavirus di Dunia
+          </div>
+          <div class="card-body" style="height: 500px; overflow: auto;">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">Negara</th>
+                  <th scope="col">Positif</th>
+                  <th scope="col">Sembuh</th>
+                  <th scope="col">Meninggal</th>
+                </tr>
+              </thead>
+              <tbody id="tblGlobal">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <contact-me></contact-me>
+  <foot-app></foot-app>
+</main>
+<script type="text/javascript" src="bundle.js"></script></body>
+</html>
